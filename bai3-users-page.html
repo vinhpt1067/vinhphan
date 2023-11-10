@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * { 
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+    }
+        body {
+            display: flex;
+            width: 1600px;
+            height: 1200px;
+            padding: 173px 194px 173px 193px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .background {
+            display: inline-flex;
+            padding: 100px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 70px;
+            border-radius: 16px;
+            background: #FFF;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            align-self: stretch;
+        }
+
+        .header > h3 {
+            font-family: Merriweather;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            color: #151B32;
+        }
+
+        .navigation {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+        }
+
+        .navigation > .search-area {
+            display: inline-flex;
+            width: 327px;
+            padding: 16px;
+            align-items: center;
+            gap: 8px;
+            border-radius: 4px;
+            border: 1px solid #BFC8E5;
+        }
+
+         .nav-bar {
+            padding: 16px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-bar:focus {
+            border-radius: 8px;
+            background: #849FFF;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .section > .user-card {
+            display: flex;
+            width: 327px;
+            height: 208px;
+            padding: 24px;
+            align-items: flex-start;
+            gap: 16px;
+            border-radius: 16px;
+            background: #FBFCFF;
+        }
+
+        .user-card > .user-card-wrap {
+            display: flex;
+            width: 327px;
+            height: 208px;
+            padding: 24px;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .user-card-wrap > img {
+            width: 97px;
+            height: 97px;
+            flex-shrink: 0;
+            border-radius: 97px;
+        }
+
+        .user-card-wrap > .info-area {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .user-card-wrap > .info-area > .name-area {
+            display: flex;
+            padding-top: 20px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        .name-area > .name {
+            color:  #151B32;
+            font-family: Merriweather;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+        }
+
+        .info-area > .interests {
+            display: flex;
+            align-items: flex-start;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .info-area > .interests > p {
+            padding: 0 8px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            border: 1px solid #BFC8E5;
+            background: #FFF;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="header">
+            <h3>Users</h3>
+            <div class="navigation">
+                <span class="search-area"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search users"></span>
+                <div>
+                    <a href="#"class ="nav-bar">Reputation</a>
+                    <a href="#"class ="nav-bar">New Users</a>
+                    <a href="#"class ="nav-bar">Voters</a>
+                    <a href="#"class ="nav-bar">Editors</a>
+                    <a href="#"class ="nav-bar">Moderators</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="user-card">
+            <div class="user-card-wrap">
+                <img src="https://s3-alpha-sig.figma.com/img/f7ff/f537/1cfe5c1bcc03b9b81c2d7b42f5828a59?Expires=1700438400&Signature=fW~VdTtHB0lP-A5kzEX0XB1WyaxPzWOFjj-hm3g7aoHc9tpgfuAb0jveoSHs13fubudL3EKvblDutGC5dRDAbhvFcpfCqP4OhKUtv23hixElafTA1br5~SkGgt86PDPkCsUFH6dOaOdIs3yI4icN8-RCv00ECsPj-ymW4pP~DsPbYYGJmwrkhjnE3IxM4OnRZIUXpe0ETrqHDFyTl~wc6oumpc0JddKNvfsmiEbKKDqthtzYKEXaak04iFIp3175iH1ejvbomqhwc-0FKdwLy4oazQ303K2vXFQyxXpIa8OdNBVsn4baxekRakusk8fiCRfU7J9fMv1bUW7quS-Z2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                <div class="info-area">
+                    <div class="name-area">
+                        <h4 class="name">Lelah Nichols</h4>
+                        <p class="adress">Troy,M</p>
+                    </div>
+                    <div class="interests">
+                        <p>clothes</p>
+                        <p>stem</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="user-card">
+            <div class="user-card-wrap">
+                <img src="https://s3-alpha-sig.figma.com/img/41ed/baf1/225faee70e15159236035178cca54a11?Expires=1700438400&Signature=h46b1IiqCpuaeG1NC4q6tVDwguOOeCpB8J84nV5MHBHLwDJW~8tjzB94WekkxyzBE2ib2Hz3ItXfYfRlOSMTHN7keqD0iP5ZZj6zLOrEZmYw0TpVwm1GFIqLOfnLQk4yX2aZcwM49WmL-f-obGiDgPqQaWdWRPS1r8s9WDVXQQOPs7dey3i35nuT62pSy-8SbAwm-tUdlK56YCaY6kiFJBHtjOOVnucVwcDBnB0b4jkmgVTSAg7EwzO8qBuqebDVc5I5voR2Mow4kjpconl0c8733hvrRW6Kq93c8Gk1NEu2TKFopRy7AQ5h6QokCEEJh3EK~RaP7oXTL0DtIjg0JA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                <div class="info-area">
+                    <div class="name-area">
+                        <h4 class="name">Jesus Weiss</h4>
+                        <p class="adress">Forth Worh, TX</p>
+                    </div>
+                    <div class="interests">
+                        <p>headset</p>
+                        <p>gadget</p>
+                        <p>speed</p>
+                        <p>winter</p>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="user-card">
+            <div class="user-card-wrap">
+                <img src="https://s3-alpha-sig.figma.com/img/afd7/fd08/2942944e4e7e80e66c97c9b4491b1092?Expires=1700438400&Signature=lip8lts42Tll~4RhEdDwT1pu1SUyC-qH0gWXB8OGKKezoLTi98cT-99v7BPSiNmj2BwF2dU4pFT52T3PePMlcZPdMNBtCpX8fMqNNcWpQQoVDtRCI7hranBsnsPXCuL8wyDjVm0nXoNKxEtou0tr2vcUDXHNEHxaRjptz50ODWU5UU3GcxzIwE4c4UabjNTpSRVkMXM2j4JdY~sQbtqJzHoLv5~G65cK7QMkW32zU~PUaNw6UkEVvPkCdCidUj2uKkeiKgSFQK-nGIZXXiLF9nV-ukGWWqAxrRSd23-8A4ZbbVhmz1-znbnv41BW29fSU6ZllQ7-9raRTRlcoUZhPQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                <div class="info-area">
+                    <div class="name-area">
+                        <h4 class="name">Annie Rice</h4>
+                        <p class="adress">Austin, TX</p>
+                    </div>
+                    <div class="interests">
+                        <p>road</p>
+                        <p>moutain</p>
+                        <p>earth</p>
+                        <p>nature</p>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="user-card">
+            <div class="user-card-wrap">
+                <img src="https://s3-alpha-sig.figma.com/img/c81f/faee/d7f9f9b81bb8acfe93d3b739115d770e?Expires=1700438400&Signature=XtLyJKCEVhmdC03lBp67Qy9bWeB71GYJQ1CAcbh11~vk7syMRhFoTC-tIpxQIf7SFuX96O1oCvdbKdWj00SjyYe~X2MLmx32e4-9A6zyoSLwewOHrP3z1SrhvqveGJvbp4zOLjIqzhkKZ2Z8xNNesNxRU1RtvOiVWpZIvoNxIvtz~4J-7YoCro0DfD4vx2KwO8qZdMWmt~7Ej3rwRCFN9dlbNW08zE9PYd-eTv-y4PfnaetJJvVBJGZtxpfweYO9NXPG9XJK1B1NmzreUJskfMDXJ6LizN0OXHzpNKEph0mUu-eW37~yCrbwl5Hw63SU1qdAd7QJjdPV4gMBcWEg0g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                <div class="info-area">
+                    <div class="name-area">
+                        <h4 class="name">Robert Brower</h4>
+                        <p class="adress">Cincinnati, OH</p>
+                    </div>
+                    <div class="interests">
+                        <p>Maintenance</p>
+                        <p>gears</p>
+                        <p>frames</p>
+                        <p>repair</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="user-card">
+            <div class="user-card-wrap">
+                <img src="https://s3-alpha-sig.figma.com/img/11b3/77e8/6aa344879afba431d7cee9da5ee62cde?Expires=1700438400&Signature=hIhk4plpKwaIR1i3cLgXs2OMZo2YasiLE6ogc3q~vHIAXurlgGDX2Q7bfeK333Qg1maYvRhCU256bugLeKOHgc~xQx~Jiu5MRLosUb32hZEEdqVSY9jCEnK-y59oLuUE3uFi8Czh6UscNZe1hPUG6bEM1Rw63s19GusljO-6oAcfHjKtYwJ5RMbFM-TxOko40UEYreqDCnYiiMpSA6CUVy8hSkRy8Ja9~IaLCycUQFu1F0yNF8MR2Y2rk5DTsaSpGAiFl7tohKZOpvgTBeI1hZE5blHxHWxP2WDDHSBZDl9eipSEdIZ2~1PmWzacLIK~TltInsxslA8ULFRbHavhvQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                <div class="info-area">
+                    <div class="name-area">
+                        <h4 class="name">Amy Campbell</h4>
+                        <p class="adress">Warrior, AL</p>
+                    </div>
+                    <div class="interests">
+                        <p>music</p>
+                        <p>disk</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="user-card">
+            <div class="user-card-wrap">
+                <img src="https://s3-alpha-sig.figma.com/img/0507/db32/e190425c8e91ed35ab3894e77679cedd?Expires=1700438400&Signature=i5wNAZE8wR0GB~WhlNjtcYiLvssdvihuklmIvU8CAIDE~AFI8m7s2dUAGhIe3q7aN4WsRf1srGM94Xb5lTQ~kBIORsIqMDVvYSYyeepHfE4RpN1LC3oqU4klPWe96JhpGqJsFQIiw3mNjRLlVRxiNW4syotrUDgCGtMslGNPtM0HLfDf~Hu2ZBAf~8PWtYkgFXz2gLY7JznjZAr5i2l33DorRPGCbPTTZlK-GG6PIJcdWWe1cGFrCkPOfj3LSef2H-mU8SR3K8Dh3vHDzMrHZnYXooqckG3~CBcN91rS2IjyBJCrcF-6hEjZspFuU8AG85ynzH0GdsDyIPpXijKH0w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                <div class="info-area">
+                    <div class="name-area">
+                        <h4 class="name">Anthony S.Morin</h4>
+                        <p class="adress">Lynhurst, NJ</p>
+                    </div>
+                    <div class="interests">
+                        <p>vintage</p>
+                        <p>Electric</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+        </div>
+    </div>
+</body>
+</html>
